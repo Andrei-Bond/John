@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap");
 * {
   padding: 0px;
   margin: 0px;
@@ -38,7 +37,7 @@ body {
 
 body {
   line-height: 1;
-  font-family: "Heebo", sans-serif;
+  font-family: "";
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -47,7 +46,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Heebo", sans-serif;
+  font-family: "";
 }
 
 input::-ms-clear {
@@ -106,18 +105,24 @@ body.lock {
 }
 
 .container {
-  max-width: 856px;
+  max-width: 1170px;
   margin: 0 auto;
   width: 100%;
 }
 
-@media (max-width: 868px) {
+@media (max-width: 1182px) {
+  .container {
+    max-width: 970px;
+  }
+}
+
+@media (max-width: 991.98px) {
   .container {
     max-width: 750px;
   }
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .container {
     max-width: none;
     padding: 0 10px;
@@ -799,149 +804,89 @@ body.ie .ibg img {
   top: 18px !important;
 }
 
-@font-face {
-  font-family: 'icomoon';
-  font-display: swap;
-  src: url("fonts/icomoon.ttf?qxn6mw") format("truetype"), url("fonts/icomoon.woff?qxn6mw") format("woff"), url("fonts/icomoon.svg?qxn6mw#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-fb:before {
-  content: "\e900";
-}
-
-.icon-insta:before {
-  content: "\e901";
-}
-
-.icon-linkedin:before {
-  content: "\e902";
-}
-
-.icon-twitter:before {
-  content: "\e903";
-}
-
-.header {
-  max-width: 1052px;
-  margin: 0 auto;
-  align-items: center;
-  padding: 10px 10px;
-  min-height: 60px;
-}
-
-@media (max-width: 767.98px) {
-  .menu__body {
-    display: block;
-    position: fixed;
-    left: 0px;
-    top: -250px;
-    width: 100%;
-    height: 100%;
-    transition: top 0.3s ease 0s;
-  }
-  .menu__body._active {
-    top: 0px;
-    left: 0px;
-    overflow: scroll;
-  }
-}
-
-.menu__list {
-  display: flex;
-  justify-content: flex-end;
-  height: 80px;
-  align-items: center;
-}
-
-@media (max-width: 767.98px) {
-  .menu__list {
-    display: block;
-    height: 50px;
-  }
-  .menu__list li {
-    margin-top: 50px;
-    align-items: center;
-    text-align: center;
-  }
-}
-
-.menu__link {
-  font-weight: 500;
-  font-size: 20px;
-  margin-left: 33px;
-  transition: color 0.3s ease 0s;
-}
-
-@media (max-width: 767.98px) {
-  .menu__link {
-    font-size: 30px;
-    margin-left: 0px;
-  }
-}
-
-@media (min-width: 991.98px) {
-  .menu__link:hover {
-    color: #ff6464;
-  }
-}
-
-.icon-menu {
+.popup {
+  -webkit-overflow-scrolling: touch;
+  background-color: rgba(0, 0, 0, 0.8);
   display: none;
+  position: fixed !important;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 100;
 }
 
-@media (max-width: 767.98px) {
-  .icon-menu {
-    display: block;
-    position: absolute;
-    top: 18px;
-    right: 10px;
-    width: 30px;
-    height: 18px;
-    cursor: pointer;
-    z-index: 5;
-  }
-  .icon-menu span {
-    transition: all 0.5s ease 0s;
-    top: 8px;
-    left: 0px;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #000;
-  }
-  .icon-menu span:first-child {
-    top: 0px;
-  }
-  .icon-menu span:last-child {
-    top: auto;
-    bottom: 0px;
-  }
-  .icon-menu._active span {
-    transform: scale(0);
-  }
-  .icon-menu._active span:first-child {
-    transform: rotate(-135deg);
-    top: 8px;
-  }
-  .icon-menu._active span:last-child {
-    transform: rotate(135deg);
-    bottom: 8px;
-  }
+.popup.active .popup-content {
+  transform: scale(1);
 }
+
+.popup.show {
+  display: block;
+}
+
+.popup.show .popup-content {
+  transform: scale(1);
+}
+
+.popup-table {
+  height: 100%;
+  table-layout: fixed;
+}
+
+.popup-table > .cell {
+  height: 100%;
+  vertical-align: middle;
+  padding: 30px 10px;
+}
+
+.popup-content {
+  transform: scale(0);
+  transition: all 0.3s ease 0s;
+  position: relative;
+  max-width: 1230px;
+  margin: 0px auto;
+  background-color: #fff;
+}
+
+.popup-close {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  cursor: pointer;
+  background: url("../img/icons/close.png") 0 0 no-repeat;
+}
+
+.popup-video .popup-close {
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  top: 0;
+  right: 0;
+}
+
+/*
+	Стиль иконки бургера
+	.icon-menu{
+		display: block;
+		position: absolute;
+		top: 18px;
+		right: 10px;
+		width:30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span{@include anim(0.3s,0s);top: 8px;left: 0px;position: absolute;width: 100%;height: 2px;background-color: #000;
+			&:first-child{top: 0px;}
+			&:last-child{top: auto;bottom: 0px;}
+		}
+		&.active{
+			span{@include scale(0);
+				&:first-child{@include rotate(-45deg);top: 8px;}
+				&:last-child{@include rotate(45deg);bottom: 8px;}
+			}
+		}
+	}
+*/
