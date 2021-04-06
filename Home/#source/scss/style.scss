@@ -87,13 +87,12 @@ body {
 
 //<Card>
 .card {
-	
-	max-height: 505px;
+	margin-bottom: 50px;
+	padding-bottom: 21px;
 
 	&__row {
 		display: flex;
 		justify-content: space-between;
-		padding-bottom: 71px;
 		padding-top: 140px;
 	}
 	&__content {
@@ -130,11 +129,99 @@ body {
 	}
 
 	&__foto {
+		
+		img {
+		box-shadow: -5px 13px 1px #EDF7FA;
+		border-radius: 50%;
+		}
 	}
 }
 
-//</Card>
+//</Card>=================================================================================================================================================================================
+//<Recent>===================================================================
 
+.recent {
+	background-color: #EDF7FA;
+	color: #21243D;
+
+	&__row {
+	}
+
+	&__comments {
+		display: flex;
+		justify-content: space-between;
+		padding-top: 30px;
+		margin-top: 30px;
+		margin-bottom: 22px;
+	}
+
+	&__name {
+		font-size: 22px;
+		color: #21243D;
+	}
+
+	&__link {
+		color: #00A8CC;
+		font-size: 16px;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 32px;
+	}
+
+	&__block {
+		background-color: #fff;
+		border-radius: 4px;
+		flex: 0 1 48%;
+		padding: 25px 23px 35px 23px;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 26px;
+		line-height: 38px;
+		margin-bottom: 40px;
+	}
+
+	&__info {
+		font-size: 18px;
+		margin-bottom: 22px;
+		display: flex;
+		
+		
+		align-items: center;
+
+	}
+
+	&__date {
+	}
+
+	&__line {
+
+		flex: 0 1 15%;
+		div {
+			background-color: #000;
+			width: 1px;
+			height: 21px;
+			margin: 0 auto;
+		}
+
+
+	}
+
+	&__application {
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 23.5px;
+	}
+}
+
+
+//</Recent>==================================================================================================================
 
 
 //====================================================================================================

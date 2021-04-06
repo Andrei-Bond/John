@@ -852,15 +852,15 @@ body.ie .ibg img {
     display: block;
     position: fixed;
     left: 0px;
-    top: -400%;
+    top: -200%;
     width: 100%;
     height: 100%;
-    transition: top 0.3s ease 0s;
+    transition: top 0.5s ease 0s;
   }
   .menu__body._active {
     top: 0px;
     left: 0px;
-    overflow: scroll;
+    overflow: auto;
   }
 }
 
@@ -952,13 +952,13 @@ body.ie .ibg img {
 }
 
 .card {
-  max-height: 505px;
+  margin-bottom: 50px;
+  padding-bottom: 21px;
 }
 
 .card__row {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 71px;
   padding-top: 140px;
 }
 
@@ -993,4 +993,75 @@ body.ie .ibg img {
   font-weight: 500;
   font-size: 20px;
   color: #ffffff;
+}
+
+.card__foto img {
+  box-shadow: -5px 13px 1px #EDF7FA;
+  border-radius: 50%;
+}
+
+.recent {
+  background-color: #EDF7FA;
+  color: #21243D;
+}
+
+.recent__comments {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  margin-top: 30px;
+  margin-bottom: 22px;
+}
+
+.recent__name {
+  font-size: 22px;
+  color: #21243D;
+}
+
+.recent__link {
+  color: #00A8CC;
+  font-size: 16px;
+}
+
+.recent__content {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 32px;
+}
+
+.recent__block {
+  background-color: #fff;
+  border-radius: 4px;
+  flex: 0 1 48%;
+  padding: 25px 23px 35px 23px;
+}
+
+.recent__title {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 38px;
+  margin-bottom: 40px;
+}
+
+.recent__info {
+  font-size: 18px;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+}
+
+.recent__line {
+  flex: 0 1 15%;
+}
+
+.recent__line div {
+  background-color: #000;
+  width: 1px;
+  height: 21px;
+  margin: 0 auto;
+}
+
+.recent__text {
+  font-size: 16px;
+  line-height: 23.5px;
 }
