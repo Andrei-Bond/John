@@ -1199,7 +1199,7 @@ body.ie .ibg img {
   .featured__post {
     flex-direction: column;
     padding-top: 0;
-    flex: 1 0 85%;
+    flex: 1 0 80%;
     margin: 0 15px;
     padding-bottom: 20px;
   }
