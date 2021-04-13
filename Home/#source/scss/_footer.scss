@@ -1,5 +1,37 @@
-footer{}
+
 //====================================================================================================
+.footer {
+
+	&__row {
+		margin-top: 51px;
+		margin-bottom: 60px;
+	}
+
+	&__social {
+		font-size: 30px;
+		display: flex;
+		margin: 0 auto;
+		max-width: 232px;
+		justify-content: space-between;
+		margin-bottom: 30px;
+	}
+
+	&__link {
+		color: #21243D;
+		&:visited {
+			color: #21243D;
+		}
+	}
+
+
+	&__copyright {
+		font-size: 14px;
+		//line-height: 21px;
+		text-align: center;
+		color: #21243D;
+	}
+}
+
 
 //====================================================================================================
 

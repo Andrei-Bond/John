@@ -802,7 +802,7 @@ body.ie .ibg img {
 @font-face {
   font-family: 'icomoon';
   font-display: swap;
-  src: url("fonts/icomoon.ttf?qxn6mw") format("truetype"), url("fonts/icomoon.woff?qxn6mw") format("woff"), url("fonts/icomoon.svg?qxn6mw#icomoon") format("svg");
+  src: url("..//..//fonts/icomoon.ttf?qxn6mw") format("truetype"), url("..//..//fonts/icomoon.woff?qxn6mw") format("woff"), url("..//..//fonts/icomoon.svg?qxn6mw#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -951,6 +951,34 @@ body.ie .ibg img {
   }
 }
 
+.footer__row {
+  margin-top: 51px;
+  margin-bottom: 60px;
+}
+
+.footer__social {
+  font-size: 30px;
+  display: flex;
+  margin: 0 auto;
+  max-width: 232px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.footer__link {
+  color: #21243D;
+}
+
+.footer__link:visited {
+  color: #21243D;
+}
+
+.footer__copyright {
+  font-size: 14px;
+  text-align: center;
+  color: #21243D;
+}
+
 .card {
   margin-bottom: 50px;
   padding-bottom: 21px;
@@ -1064,4 +1092,69 @@ body.ie .ibg img {
 .recent__text {
   font-size: 16px;
   line-height: 23.5px;
+}
+
+.featured {
+  padding-bottom: 77px;
+}
+
+.featured__part {
+  font-size: 22px;
+  color: #21243D;
+  margin-top: 35px;
+  margin-bottom: 14px;
+}
+
+.featured__post {
+  display: flex;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #E0E0E0;
+  padding-top: 31px;
+}
+
+.featured__picture {
+  margin-right: 18px;
+}
+
+.featured__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 35px;
+}
+
+.featured__title {
+  font-weight: bold;
+  font-size: 30px;
+  color: #21243D;
+  margin-bottom: 30px;
+  padding-top: 6px;
+}
+
+.featured__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.featured__year {
+  background: #142850;
+  border-radius: 16px;
+  font-weight: 900;
+  font-size: 18px;
+  color: #FFFFFF;
+  padding: 3px 10px;
+  margin-right: 26px;
+}
+
+.featured__type {
+  font-size: 20px;
+  color: #8695A4;
+}
+
+.featured__text {
+  font-size: 16px;
+  line-height: 23px;
+  color: #21243D;
+  font-weight: 400;
 }
